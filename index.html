@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IPNSP Comentários (Somente Donos).</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #3498db;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+        main {
+            padding: 20px;
+        }
+        .section {
+            background-color: white;
+            border-radius: 8px;
+            padding: 15px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+        .message-board {
+            background-color: white;
+            border-radius: 8px;
+            padding: 15px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            background-color: #3498db;
+            color: white;
+            font-size: 16px;
+        }
+        footer {
+            text-align: center;
+            background-color: #2c3e50;
+            color: white;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+        .message {
+            background-color: #ecf0f1;
+            border: 1px solid #ddd;
+            margin-bottom: 10px;
+            padding: 10px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>IPNSP Comentários</h1>
+    </header>
+
+    <main>
+        <!-- Seção para a História -->
+        <section class="section">
+            <h2>Invasor Sub-lore</h2>
+            <p>Então, tudo começou através de um "Invasor" que Gael tinha relatado sobre. Não sei se isso é verdade mas irei continuar a história. Então, Maria se assustou sobre o caso e o invasor explodiu uma construção que não sei o nome. Mais ele havia explodido a construção e isso chamou atenção da Segurança da Cidade (SSMNB) que depois teve mais um invasor nomeado "Jogador" sendo que o usuário com nome "Jogador" Não era visto a anos desde que ele entrou no Minecraft de Wii U e ele tem uma foto de Atari.</p>
+            <p>Depois disso, a cidade ficou achando que era Davi Lucas devido que Gael e Eu explodimos a casa dele pra falar que ia dar outra casa, mais não deu outra casa. Então Davi Lucas foi lá e explodiu o Instituto e Prefeitura Sérgio Pessanha (IPNSP) e ele acabou levando uma multa de 5 mil reais devido a sua catástrofe  na sede da IPNSP. Depois de alguns meses ou semanas (Não sei) o Arthur (SavoryHare3224) ficou off-line de plataformas de jogos como Minecraft, Roblox e outros. Por isso, Gael suspeitou muito dele. Mais depois parou porque ele não era o Invasor. Parte 2? </p>
+        </section>
+
+        <!-- Seção para as Mensagens do Fórum -->
+        <section class="section message-board">
+            <h2>Comentários</h2>
+            
+            <!-- Formulário para enviar comentários -->
+            <textarea id="newComment" placeholder="Escreva seu comentário..." rows="4"></textarea><br>
+            <button onclick="postComment()">Publicar Comentário</button>
+            
+            <!-- Área para exibir os comentários -->
+            <div id="comments">
+                <!-- Comentários serão inseridos aqui -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 IPNSP. Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        // Função para adicionar novos comentários
+        function postComment() {
+            const commentText = document.getElementById('newComment').value.trim();
+            if (commentText) {
+                const commentSection = document.getElementById('comments');
+                const newCommentDiv = document.createElement('div');
+                newCommentDiv.classList.add('message');
+                newCommentDiv.innerHTML = `<strong>Anônimo:</strong> ${commentText}`;
+                commentSection.appendChild(newCommentDiv);
+                document.getElementById('newComment').value = ''; // Limpa o campo de texto após publicar
+            }
+        }
+    </script>
+
+</body>
+</html>
